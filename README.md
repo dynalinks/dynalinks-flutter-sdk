@@ -223,12 +223,20 @@ if (result.matched) {
 | Property | Type | Description |
 |----------|------|-------------|
 | `id` | `String` | Unique link identifier |
-| `deepLinkValue` | `String?` | Value for in-app navigation |
+| `name` | `String?` | Link name (for display) |
 | `path` | `String?` | Link path |
+| `shortenedPath` | `String?` | Shortened path |
+| `url` | `Uri?` | Original URL the link points to |
 | `fullUrl` | `Uri?` | Full Dynalinks URL |
+| `deepLinkValue` | `String?` | Value for in-app navigation |
+| `iosDeferredDeepLinkingEnabled` | `bool?` | Whether iOS deferred deep linking is enabled |
+| `iosFallbackUrl` | `Uri?` | iOS fallback URL (when app not installed) |
+| `androidFallbackUrl` | `Uri?` | Android fallback URL (when app not installed) |
+| `enableForcedRedirect` | `bool?` | Whether forced redirect is enabled |
 | `socialTitle` | `String?` | Social sharing title |
 | `socialDescription` | `String?` | Social sharing description |
 | `socialImageUrl` | `Uri?` | Social sharing image |
+| `clicks` | `int?` | Number of clicks on this link |
 
 ### Exceptions
 
@@ -238,8 +246,13 @@ if (result.matched) {
 | `InvalidApiKeyException` | Invalid API key |
 | `SimulatorException` | Running on simulator/emulator |
 | `NetworkException` | Network request failed |
+| `InvalidResponseException` | Server returned invalid response |
 | `ServerException` | Server returned an error |
 | `NoMatchException` | No matching link found |
+| `InvalidIntentException` | Invalid intent data (Android) |
+| `InstallReferrerUnavailableException` | Install Referrer API unavailable (Android) |
+| `InstallReferrerTimeoutException` | Install Referrer connection timed out (Android) |
+| `UnknownException` | Unknown error occurred |
 
 ## Configuration Options
 
