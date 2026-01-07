@@ -1,0 +1,35 @@
+PODS:
+  - dynalinks (1.0.0):
+    - DynalinksSDK (~> 1.0)
+    - Flutter
+  - DynalinksSDK (1.0.2)
+  - Flutter (1.0.0)
+  - integration_test (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - dynalinks (from `.symlinks/plugins/dynalinks/ios`)
+  - Flutter (from `Flutter`)
+  - integration_test (from `.symlinks/plugins/integration_test/ios`)
+
+SPEC REPOS:
+  trunk:
+    - DynalinksSDK
+
+EXTERNAL SOURCES:
+  dynalinks:
+    :path: ".symlinks/plugins/dynalinks/ios"
+  Flutter:
+    :path: Flutter
+  integration_test:
+    :path: ".symlinks/plugins/integration_test/ios"
+
+SPEC CHECKSUMS:
+  dynalinks: f90f029c9bb231f2d539a6db0321f82e9072a096
+  DynalinksSDK: 0e0fad5127278be49cf775317829ca77578d4c87
+  Flutter: cabc95a1d2626b1b06e7179b784ebcf0c0cde467
+  integration_test: 252f60fa39af5e17c3aa9899d35d908a0721b573
+
+PODFILE CHECKSUM: 1857a7cdb7dfafe45f2b0e9a9af44644190f7506
+
+COCOAPODS: 1.14.3
