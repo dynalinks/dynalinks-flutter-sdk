@@ -43,7 +43,7 @@ flutter pub get
    - Add the "Associated Domains" capability
    - Add your Dynalinks domain: `applinks:yourproject.dynalinks.app`
 
-3. Add the `apple-app-site-association` file to your Dynalinks project dashboard
+3. Register your iOS app in the [Dynalinks Console](https://dynalinks.app/console)
 
 ### Android Setup
 
@@ -91,7 +91,7 @@ dependencyResolutionManagement {
 </activity>
 ```
 
-3. Configure Digital Asset Links in your Dynalinks project dashboard
+3. Register your Android app in the [Dynalinks Console](https://dynalinks.app/console)
 
 ## Usage
 
@@ -279,9 +279,9 @@ See the [example](example/) directory for a complete sample app demonstrating al
 
 ## Support
 
-- [Documentation](https://dynalinks.app/docs)
+- [Documentation](https://docs.dynalinks.app)
 - [GitHub Issues](https://github.com/dynalinks/dynalinks-flutter-sdk/issues)
-- [Email Support](mailto:support@dynalinks.app)
+- [Email Support](mailto:admins@dynalinks.app)
 
 ## License
 
