@@ -35,22 +35,27 @@ flutter pub get
 
 ### iOS Setup
 
-1. Add the `DynalinksSDK` CocoaPod (automatically included via plugin)
+1. **Register your iOS app** in the [Dynalinks Console](https://dynalinks.app/console):
+   - Bundle Identifier (from Xcode project settings)
+   - Team ID (from Apple Developer account)
+   - App Store ID (from your app's App Store URL)
 
-2. Configure your Associated Domains in Xcode:
-   - Open your iOS project in Xcode
-   - Select your target > Signing & Capabilities
+2. **Configure Associated Domains** in Xcode:
+   - Open your iOS project > Signing & Capabilities
    - Add the "Associated Domains" capability
-   - Add your Dynalinks domain: `applinks:yourproject.dynalinks.app`
+   - Add your domain: `applinks:yourproject.dynalinks.app`
 
-3. Register your iOS app in the [Dynalinks Console](https://dynalinks.app/console)
+See the [iOS integration guide](https://docs.dynalinks.app/integrations/ios.html) for detailed instructions.
 
 ### Android Setup
 
-1. Add JitPack repository to your project's `settings.gradle` or `build.gradle`:
+1. **Register your Android app** in the [Dynalinks Console](https://dynalinks.app/console):
+   - Package identifier (from `build.gradle` applicationId)
+   - SHA-256 certificate fingerprint (run `./gradlew signingReport`)
+
+2. **Add JitPack repository** to your project's `settings.gradle.kts`:
 
 ```kotlin
-// settings.gradle.kts
 dependencyResolutionManagement {
     repositories {
         google()
@@ -60,26 +65,13 @@ dependencyResolutionManagement {
 }
 ```
 
-Or in Groovy (`settings.gradle`):
-
-```groovy
-dependencyResolutionManagement {
-    repositories {
-        google()
-        mavenCentral()
-        maven { url 'https://jitpack.io' }
-    }
-}
-```
-
-2. Add intent filters to your `AndroidManifest.xml`:
+3. **Add intent filter** to your `AndroidManifest.xml`:
 
 ```xml
 <activity
     android:name=".MainActivity"
     android:launchMode="singleTask">
 
-    <!-- App Links -->
     <intent-filter android:autoVerify="true">
         <action android:name="android.intent.action.VIEW" />
         <category android:name="android.intent.category.DEFAULT" />
@@ -91,7 +83,7 @@ dependencyResolutionManagement {
 </activity>
 ```
 
-3. Register your Android app in the [Dynalinks Console](https://dynalinks.app/console)
+See the [Android integration guide](https://docs.dynalinks.app/integrations/android.html) for detailed instructions.
 
 ## Usage
 
