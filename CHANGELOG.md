@@ -5,6 +5,23 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.2] - 2026-01-21
+
+### Added
+
+- Added attribution tracking fields to `LinkData` model:
+  - `referrer` - Referrer tracking parameter (e.g., "utm_source=facebook&utm_campaign=summer")
+  - `providerToken` - Apple Search Ads attribution token (pt parameter)
+  - `campaignToken` - Campaign identifier for attribution (ct parameter)
+- Updated README with attribution tracking examples
+- iOS plugin bridge now passes attribution fields from native SDK 1.0.3
+- Android plugin bridge now passes attribution fields from native SDK 1.0.1
+
+### Changed
+
+- Updated Android SDK dependency to 1.0.1 (adds `iosDeferredDeepLinkingEnabled` field)
+- iOS SDK dependency remains at `~> 1.0` (automatically resolves to 1.0.3)
+
 ## [1.0.1] - 2026-01-21
 
 ### Fixed

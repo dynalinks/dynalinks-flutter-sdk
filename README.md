@@ -229,6 +229,9 @@ if (result.matched) {
 | `socialDescription` | `String?` | Social sharing description |
 | `socialImageUrl` | `Uri?` | Social sharing image |
 | `clicks` | `int?` | Number of clicks on this link |
+| `referrer` | `String?` | Referrer tracking parameter for attribution |
+| `providerToken` | `String?` | Apple Search Ads attribution token (pt) |
+| `campaignToken` | `String?` | Campaign identifier for attribution (ct) |
 
 ### Exceptions
 
@@ -264,6 +267,38 @@ await Dynalinks.configure(
 - `DynalinksLogLevel.warning` - Warnings and errors
 - `DynalinksLogLevel.info` - Info, warnings, and errors
 - `DynalinksLogLevel.debug` - All logs
+
+## Attribution Tracking
+
+The SDK provides attribution data for campaign tracking and analytics:
+
+```dart
+final result = await Dynalinks.checkForDeferredDeepLink();
+if (result.matched && result.link != null) {
+  final link = result.link!;
+
+  // Track attribution data for analytics
+  if (link.referrer != null) {
+    print('Referrer: ${link.referrer}'); // e.g., "utm_source=facebook&utm_campaign=summer"
+  }
+
+  if (link.providerToken != null) {
+    print('Apple Search Ads token: ${link.providerToken}'); // pt parameter
+  }
+
+  if (link.campaignToken != null) {
+    print('Campaign: ${link.campaignToken}'); // ct parameter
+  }
+
+  // Send to your analytics platform
+  analytics.track('deep_link_opened', properties: {
+    'referrer': link.referrer,
+    'provider_token': link.providerToken,
+    'campaign': link.campaignToken,
+    'deep_link': link.deepLinkValue,
+  });
+}
+```
 
 ## Example App
 

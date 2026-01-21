@@ -4,7 +4,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'dynalinks'
-  s.version          = '1.0.0'
+  s.version          = '1.0.2'
   s.summary          = 'Dynalinks Flutter Plugin for iOS'
   s.description      = <<-DESC
 Flutter plugin for Dynalinks deep linking SDK on iOS.

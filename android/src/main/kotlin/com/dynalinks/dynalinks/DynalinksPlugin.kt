@@ -252,7 +252,11 @@ class DynalinksPlugin : FlutterPlugin, MethodCallHandler, ActivityAware,
                 "social_title" to link.socialTitle,
                 "social_description" to link.socialDescription,
                 "social_image_url" to link.socialImageUrl,
-                "clicks" to link.clicks
+                "clicks" to link.clicks,
+                "ios_deferred_deep_linking_enabled" to link.iosDeferredDeepLinkingEnabled,
+                "referrer" to link.referrer,
+                "provider_token" to link.providerToken,
+                "campaign_token" to link.campaignToken
             )
         }
 

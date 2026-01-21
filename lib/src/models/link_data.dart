@@ -51,6 +51,15 @@ class LinkData {
   /// Number of clicks on this link.
   final int? clicks;
 
+  /// Referrer tracking parameter (e.g., "utm_source=facebook").
+  final String? referrer;
+
+  /// Apple Search Ads attribution token (pt parameter).
+  final String? providerToken;
+
+  /// Campaign identifier for attribution (ct parameter).
+  final String? campaignToken;
+
   /// Creates a new [LinkData] instance.
   const LinkData({
     required this.id,
@@ -68,6 +77,9 @@ class LinkData {
     this.socialDescription,
     this.socialImageUrl,
     this.clicks,
+    this.referrer,
+    this.providerToken,
+    this.campaignToken,
   });
 
   /// Creates a [LinkData] from a JSON map.
@@ -89,6 +101,9 @@ class LinkData {
       socialDescription: json['social_description'] as String?,
       socialImageUrl: _parseUri(json['social_image_url']),
       clicks: json['clicks'] as int?,
+      referrer: json['referrer'] as String?,
+      providerToken: json['provider_token'] as String?,
+      campaignToken: json['campaign_token'] as String?,
     );
   }
 
@@ -115,6 +130,9 @@ class LinkData {
         'social_description': socialDescription,
         'social_image_url': socialImageUrl?.toString(),
         'clicks': clicks,
+        'referrer': referrer,
+        'provider_token': providerToken,
+        'campaign_token': campaignToken,
       };
 
   @override

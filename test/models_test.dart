@@ -51,6 +51,9 @@ void main() {
         'social_description': 'Amazing product description',
         'social_image_url': 'https://example.com/image.png',
         'clicks': 42,
+        'referrer': 'utm_source=facebook&utm_campaign=summer',
+        'provider_token': '12345678',
+        'campaign_token': 'summer_sale',
       };
 
       final linkData = LinkData.fromJson(json);
@@ -70,6 +73,9 @@ void main() {
       expect(linkData.socialDescription, equals('Amazing product description'));
       expect(linkData.socialImageUrl?.path, equals('/image.png'));
       expect(linkData.clicks, equals(42));
+      expect(linkData.referrer, equals('utm_source=facebook&utm_campaign=summer'));
+      expect(linkData.providerToken, equals('12345678'));
+      expect(linkData.campaignToken, equals('summer_sale'));
     });
 
     test('fromJson handles null optional fields', () {

@@ -232,6 +232,9 @@ public class DynalinksPlugin: NSObject, FlutterPlugin, FlutterStreamHandler {
             "social_description": link.socialDescription,
             "social_image_url": link.socialImageURL?.absoluteString,
             "clicks": link.clicks,
+            "referrer": link.referrer,
+            "provider_token": link.providerToken,
+            "campaign_token": link.campaignToken,
         ]
     }
 
