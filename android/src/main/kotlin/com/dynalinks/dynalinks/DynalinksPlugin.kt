@@ -238,7 +238,7 @@ class DynalinksPlugin : FlutterPlugin, MethodCallHandler, ActivityAware,
         )
 
         result.link?.let { link ->
-            map["link"] = mapOf(
+            map["link"] = hashMapOf<String, Any?>(
                 "id" to link.id,
                 "name" to link.name,
                 "path" to link.path,

@@ -53,7 +53,8 @@ class DeepLinkResult {
       confidence: Confidence.fromString(json['confidence'] as String?),
       matchScore: json['match_score'] as int?,
       link: json['link'] != null
-          ? LinkData.fromJson(json['link'] as Map<String, dynamic>)
+          ? LinkData.fromJson(
+              Map<String, dynamic>.from(json['link'] as Map))
           : null,
       isDeferred: json['is_deferred'] as bool? ?? false,
     );

@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.1] - 2026-01-21
+
+### Fixed
+
+- Fixed TypeError when parsing nested maps from Android platform channels
+- Android platform now properly handles `Map<Object?, Object?>` to `Map<String, dynamic>` conversion for link data
+- Resolves: `type '_Map<Object?, Object?>' is not a subtype of type 'Map<String, dynamic>' in type cast` error
+
 ## [1.0.0] - 2025-01-06
 
 ### Added

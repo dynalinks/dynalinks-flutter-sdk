@@ -1,6 +1,6 @@
 name: dynalinks
 description: "Dynalinks SDK for Flutter - Deferred deep linking and attribution for iOS and Android apps."
-version: 1.0.0
+version: 1.0.1
 homepage: https://dynalinks.app
 repository: https://github.com/dynalinks/dynalinks-flutter-sdk
 issue_tracker: https://github.com/dynalinks/dynalinks-flutter-sdk/issues
