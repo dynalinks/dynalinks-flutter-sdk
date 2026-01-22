@@ -5,6 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.3] - 2026-01-21
+
+### Fixed
+
+- **CRITICAL**: Updated iOS SDK dependency to require minimum version 1.0.3 (`~> 1.0.3`)
+  - Fixes build error: "Value of type 'DeepLinkResult.LinkData' has no member 'referrer'"
+  - Previous `~> 1.0` allowed iOS SDK 1.0.2 which lacks attribution fields
+  - Users should run `cd ios && pod update DynalinksSDK` after updating
+
 ## [1.0.2] - 2026-01-21
 
 ### Added

@@ -4,7 +4,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'dynalinks'
-  s.version          = '1.0.2'
+  s.version          = '1.0.3'
   s.summary          = 'Dynalinks Flutter Plugin for iOS'
   s.description      = <<-DESC
 Flutter plugin for Dynalinks deep linking SDK on iOS.
@@ -16,7 +16,7 @@ Provides deferred deep linking and attribution capabilities.
   s.source           = { :path => '.' }
   s.source_files     = 'Classes/**/*'
   s.dependency 'Flutter'
-  s.dependency 'DynalinksSDK', '~> 1.0'
+  s.dependency 'DynalinksSDK', '~> 1.0.3'
   s.platform         = :ios, '16.0'
 
   # Flutter.framework does not contain a i386 slice.
