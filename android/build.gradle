@@ -50,7 +50,7 @@ android {
 
     dependencies {
         // Dynalinks Android SDK (via JitPack)
-        implementation("com.github.dynalinks:dynalinks-android-sdk:1.0.1")
+        implementation("com.github.dynalinks:dynalinks-android-sdk:1.0.3")
         // Coroutines for async handling
         implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
 
