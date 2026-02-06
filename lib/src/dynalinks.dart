@@ -29,7 +29,7 @@ class Dynalinks {
   static DynalinksPlatform get _platform => DynalinksPlatform.instance;
 
   /// Current SDK version.
-  static const String version = '1.0.3';
+  static const String version = '1.0.4';
 
   /// Configure the Dynalinks SDK.
   ///
